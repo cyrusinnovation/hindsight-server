@@ -1,3 +1,3 @@
 HindsightServer::Application.routes.draw do
-  resources :retrospective, :only => [:create]
+  resources :retrospective, :only => [:create, :index]
 end

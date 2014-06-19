@@ -5,4 +5,9 @@ class RetrospectiveController < ApplicationController
     Retrospective.create(:label => params[:label], :start => params[:start])
     render :json => {}
   end
+
+  def index
+    @retrospectives = Retrospective.all.to_json
+    render :json => @retrospectives
+  end
 end
