@@ -67,7 +67,7 @@ HindsightServer::Application.configure do
 
   config.frontendUrl = 'http://cyrus-hindsight.herokuapp.com'
 
-  config.middleware.use Rack::Cors do
+  config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
     allow do
       origins 'http://cyrus-hindsight.herokuapp.com'
       resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
