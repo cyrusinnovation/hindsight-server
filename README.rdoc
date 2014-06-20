@@ -1,5 +1,5 @@
 After cloning the repo locally...
-Make sure you install ruby - I recommend using rvm to do this.
+Make sure you install ruby 2.1.1. I recommend using rvm to do this.
 Then "gem install bundler"
 and then run "bundle" inside the project directory.
 Next, make sure you have postgres installed.
