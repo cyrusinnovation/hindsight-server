@@ -36,4 +36,11 @@ HindsightServer::Application.configure do
   config.assets.debug = true
 
   config.frontendUrl = 'http://127.0.0.1:9000'
+
+  config.middleware.use Rack::Cors do
+    allow do
+      origins 'http://127.0.0.1:9000'
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
+    end
+  end
 end

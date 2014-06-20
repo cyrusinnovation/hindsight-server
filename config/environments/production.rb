@@ -66,4 +66,11 @@ HindsightServer::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.frontendUrl = 'http://cyrus-hindsight.herokuapp.com'
+
+  config.middleware.use Rack::Cors do
+    allow do
+      origins 'http://cyrus-hindsight.herokuapp.com'
+      resource '*', :headers => :any, :methods => [:get, :post, :options, :delete]
+    end
+  end
 end
