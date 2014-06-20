@@ -34,4 +34,6 @@ HindsightServer::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.frontendUrl = 'http://127.0.0.1:9000'
 end
